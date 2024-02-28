@@ -2,10 +2,15 @@
 import styled from 'styled-components';
 import './globals.css';
 import { Header } from "@/components/layout/Header";
+import { MainBlock } from '@/components/blocks/MainBlock';
 
 const LayoutStyle = styled.div`
-  width: 100%;
-  margin: 60px 100px;
+  max-width: 100%;
+  margin: 40px 100px;
+`;
+
+const Content = styled.div`
+  margin-top: 120px;
 `;
 
 export default function RootLayout({ children }) {
@@ -13,10 +18,13 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <LayoutStyle>
-        <Header />
-        <>
-          {children}
-        </>
+          <Header />
+          <Content>
+            <MainBlock />
+          </Content>
+          <>
+            {children}
+          </>
         </LayoutStyle>
       </body>
     </html>
