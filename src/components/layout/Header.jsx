@@ -66,13 +66,15 @@ const OrderButton = styled.button`
 export function Header() {
     return (
         <HeaderStyle>
-            <Logo />
+            {/* <Logo /> */}
+            <Image src='/logo.svg' width={50} height={50} />
             <Links>
                 <ItemLink href={"#"}>О нас</ItemLink>
                 <ItemLink href={"#"}>Услуги</ItemLink>
                 <ItemLink href={"#"}>Портфолио</ItemLink>
                 <ItemLink href={"#"}>FAQ</ItemLink>
                 <ItemLink href={"#"}>Контакты</ItemLink>
+                
             </Links>
             <OrderButton>Оставить заявку <span>&#10138;</span></OrderButton>
         </HeaderStyle>
